@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="fr" data-lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>6Voices.ai — CONTACT / CONTACT</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap');
+
+:root{
+  --ink: #FFFFFF;
+  --ink-2: #F5F2FA;
+  --gold: #D9770B;
+  --gold-soft: #D9770B33;
+  --blue-accent: #2D3E8C;
+  --cream: #1E2340;
+  --slate: #726B85;
+  --line: #E6E1ED;
+  --max: 1040px;
+}
+
+*{box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{
+  margin:0;
+  background:radial-gradient(160% 80% at 50% -20%, #FFF3E0 0%, #FFC98C 10%, #F4926E 20%, #D9678C 32%, #B98FC4 44%, #FFFFFF 68%);
+  background-color:#FFFFFF;
+  color:var(--cream);
+  font-family:'IBM Plex Sans', sans-serif;
+  font-size:16px;
+  line-height:1.6;
+  -webkit-font-smoothing:antialiased;
+}
+
+h1,h2,h3{
+  font-family:'Source Serif 4', serif;
+  font-weight:600;
+  margin:0 0 .4em 0;
+  letter-spacing:-0.01em;
+}
+
+.eyebrow{
+  font-family:'IBM Plex Mono', monospace;
+  font-size:.78rem;
+  letter-spacing:.14em;
+  text-transform:uppercase;
+  color:var(--gold);
+  display:flex;
+  align-items:center;
+  gap:.6em;
+  margin-bottom:1em;
+}
+.eyebrow .num{
+  border:1px solid var(--gold-soft);
+  border-radius:2px;
+  padding:.15em .5em;
+}
+
+a{color:inherit;}
+
+/* ---------- Header / Nav ---------- */
+header.site{
+  position:sticky; top:0; z-index:20;
+  background:rgba(255,255,255,.92);
+  backdrop-filter:blur(6px);
+  border-bottom:1px solid var(--line);
+}
+.nav-wrap{
+  max-width:var(--max);
+  margin:0 auto;
+  padding:.9rem 1.5rem;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:1rem;
+}
+.brand{
+  font-family:'Source Serif 4', serif;
+  font-weight:700;
+  font-size:1.15rem;
+  letter-spacing:-0.01em;
+  display:flex;
+  align-items:center;
+  gap:.55em;
+  white-space:nowrap;
+}
+.brand .hex{width:16px;height:16px;flex:none;}
+
+nav.primary{
+  display:flex;
+  flex-wrap:wrap;
+  gap:.2rem 1.1rem;
+  font-family:'IBM Plex Mono', monospace;
+  font-size:.72rem;
+  letter-spacing:.08em;
+  text-transform:uppercase;
+}
+nav.primary a{
+  text-decoration:none;
+  color:var(--slate);
+  padding:.3em 0;
+  border-bottom:2px solid transparent;
+  transition:color .15s ease, border-color .15s ease;
+}
+nav.primary a:hover{color:var(--cream);}
+nav.primary a.active{color:var(--gold); border-color:var(--gold);}
+
+.lang-toggle{
+  font-family:'IBM Plex Mono', monospace;
+  font-size:.72rem;
+  letter-spacing:.08em;
+  display:flex;
+  border:1px solid var(--line);
+  border-radius:20px;
+  overflow:hidden;
+  flex:none;
+}
+.lang-toggle button{
+  background:transparent;
+  border:none;
+  color:var(--slate);
+  padding:.35em .8em;
+  cursor:pointer;
+  font-family:inherit;
+  font-size:inherit;
+  letter-spacing:inherit;
+}
+.lang-toggle button.active{background:var(--gold); color:var(--ink); font-weight:600;}
+
+/* ---------- Hero ---------- */
+main{max-width:var(--max); margin:0 auto; padding:0 1.5rem;}
+.hero{
+  padding:4.2rem 0 3rem 0;
+  border-bottom:1px solid var(--line);
+  position:relative;
+}
+.hero::before{
+  content:"";
+  display:none;
+}
+.hero::after{
+  content:"";
+  display:none;
+  pointer-events:none;
+  z-index:0;
+}
+.hero > *{position:relative; z-index:1;}
+.hero h1{font-size:clamp(2.1rem, 5vw, 3.1rem); max-width:14ch;}
+.hero .sub{
+  color:var(--slate);
+  font-size:1.05rem;
+  max-width:56ch;
+  margin-top:.6em;
+}
+
+/* ---------- Sections ---------- */
+.section{
+  padding:2.8rem 0;
+  border-bottom:1px solid var(--line);
+}
+.section:last-of-type{border-bottom:none;}
+.section h2{font-size:1.5rem;}
+.section-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit, minmax(220px,1fr));
+  gap:1.4rem;
+  margin-top:1.6rem;
+}
+.card{
+  border:1px solid var(--line);
+  border-radius:6px;
+  padding:1.3rem 1.4rem;
+  background:var(--ink-2);
+}
+.card h3{font-size:1.02rem; color:var(--cream); font-family:'IBM Plex Sans',sans-serif; font-weight:600;}
+.card .placeholder{
+  color:var(--slate);
+  font-size:.88rem;
+  font-style:italic;
+  margin-top:.5em;
+}
+
+/* ---------- Footer ---------- */
+footer.site{
+  border-top:1px solid var(--line);
+  margin-top:2rem;
+}
+.footer-wrap{
+  max-width:var(--max);
+  margin:0 auto;
+  padding:2.4rem 1.5rem 3rem 1.5rem;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  gap:1rem;
+  text-align:center;
+}
+.voices-mark{width:52px;height:52px;}
+.voices-mark circle.node{fill:var(--gold);}
+.voices-mark path.link{stroke:var(--blue-accent); stroke-width:1; opacity:.55;}
+.footer-note{
+  font-family:'IBM Plex Mono', monospace;
+  font-size:.72rem;
+  letter-spacing:.08em;
+  text-transform:uppercase;
+  color:var(--slate);
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width:760px){
+  .nav-wrap{flex-wrap:wrap;}
+  nav.primary{order:3; width:100%; padding-top:.6rem; border-top:1px solid var(--line); margin-top:.6rem;}
+}
+
+[data-lang="en"] [data-fr]{display:none;}
+[data-lang="fr"] [data-en]{display:none;}
+
+</style>
+</head>
+<body>
+
+<header class="site">
+  <div class="nav-wrap">
+    <a href="index.html" class="brand">
+      <svg class="hex" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path d="M12 1.5 L21 6.75 V17.25 L12 22.5 L3 17.25 V6.75 Z" stroke="#D9770B" stroke-width="1.1"/>
+  <circle cx="12" cy="12" r="1.6" fill="#D9770B"/>
+  <circle cx="12" cy="4.4" r="1.3" fill="#D9770B"/>
+  <circle cx="19.1" cy="8.6" r="1.3" fill="#D9770B"/>
+  <circle cx="19.1" cy="15.4" r="1.3" fill="#D9770B"/>
+  <circle cx="12" cy="19.6" r="1.3" fill="#D9770B"/>
+  <circle cx="4.9" cy="15.4" r="1.3" fill="#D9770B"/>
+  <circle cx="4.9" cy="8.6" r="1.3" fill="#D9770B"/>
+</svg>
+      6Voices.ai
+    </a>
+    <nav class="primary">
+      <a href="index.html" class="nav-link"><span data-fr="1">ACCUEIL</span><span data-en="1">HOME</span></a>
+      <a href="projet.html" class="nav-link"><span data-fr="1">PROJET 6V</span><span data-en="1">6V PROJECT</span></a>
+      <a href="methode.html" class="nav-link"><span data-fr="1">MÉTHODE</span><span data-en="1">METHOD</span></a>
+      <a href="documents.html" class="nav-link"><span data-fr="1">DOCUMENTS</span><span data-en="1">DOCUMENTS</span></a>
+      <a href="architecture-log.html" class="nav-link"><span data-fr="1">ARCHITECTURE LOG</span><span data-en="1">ARCHITECTURE LOG</span></a>
+      <a href="ressources.html" class="nav-link"><span data-fr="1">RESSOURCES</span><span data-en="1">RESOURCES</span></a>
+      <a href="contact.html" class="nav-link active"><span data-fr="1">CONTACT</span><span data-en="1">CONTACT</span></a>
+    </nav>
+    <div class="lang-toggle">
+      <button data-lang="fr" class="active">FR</button>
+      <button data-lang="en">EN</button>
+    </div>
+  </div>
+</header>
+
+<main>
+  <section class="hero">
+    <div class="eyebrow"><span class="num">N°7</span>
+      <span data-fr="1">Nous écrire / Accès</span><span data-en="1">Contact Us / Access</span>
+    </div>
+    <h1><span data-fr="1">CONTACT</span><span data-en="1">CONTACT</span></h1>
+    <p class="sub">
+      <span data-fr="1">Squelette de test — contenu à venir après validation de l'architecture technique.</span>
+      <span data-en="1">Test skeleton — content pending technical architecture validation.</span>
+    </p>
+  </section>
+
+  <section class="section">
+    <div class="section-grid">
+      <div class="card">
+        <h3><span data-fr="1">Statut</span><span data-en="1">Status</span></h3>
+        <p class="placeholder">
+          <span data-fr="1">Page vide — test de navigation et de structure bilingue.</span>
+          <span data-en="1">Empty page — navigation and bilingual structure test.</span>
+        </p>
+      </div>
+      <div class="card">
+        <h3><span data-fr="1">Prochaine étape</span><span data-en="1">Next step</span></h3>
+        <p class="placeholder">
+          <span data-fr="1">Rédaction du contenu après arbitrage de la base d'hébergement.</span>
+          <span data-en="1">Content drafting after hosting base decision.</span>
+        </p>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site">
+  <div class="footer-wrap">
+    <svg class="voices-mark" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+  <g class="link" fill="none">
+    <path class="link" d="M50 50 L50 14 M50 50 L81 32 M50 50 L81 68 M50 50 L50 86 M50 50 L19 68 M50 50 L19 32"/>
+  </g>
+  <circle class="node" cx="50" cy="50" r="4"/>
+  <circle class="node" cx="50" cy="14" r="4"/>
+  <circle class="node" cx="81" cy="32" r="4"/>
+  <circle class="node" cx="81" cy="68" r="4"/>
+  <circle class="node" cx="50" cy="86" r="4"/>
+  <circle class="node" cx="19" cy="68" r="4"/>
+  <circle class="node" cx="19" cy="32" r="4"/>
+</svg>
+    <div class="footer-note">6Voices.ai — squelette de test</div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var stored = localStorage.getItem('6v-lang');
+  var lang = stored || 'fr';
+  document.documentElement.setAttribute('data-lang', lang);
+
+  document.addEventListener('DOMContentLoaded', function(){
+    var buttons = document.querySelectorAll('.lang-toggle button');
+    function applyLang(l){
+      document.documentElement.setAttribute('data-lang', l);
+      buttons.forEach(function(b){
+        b.classList.toggle('active', b.dataset.lang === l);
+      });
+      try{ localStorage.setItem('6v-lang', l); }catch(e){}
+    }
+    applyLang(lang);
+    buttons.forEach(function(b){
+      b.addEventListener('click', function(){ applyLang(b.dataset.lang); });
+    });
+  });
+})();
+
+</script>
+</body>
+</html>
